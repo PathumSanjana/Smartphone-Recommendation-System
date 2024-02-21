@@ -146,7 +146,7 @@ def add_search_box(q: Q, msg):
     )
 
 def add_footer(q: Q):
-    caption = """__Made with 💛 by Your Name__ <br /> using __[h2o Wave](https://wave.h2o.ai/docs/getting-started).__"""
+    caption = """__Made with by Pathum Sanjana__ <br /> using __[h2o Wave](https://wave.h2o.ai/docs/getting-started).__"""
     q.page["footer"] = ui.footer_card(
         box="2 11 10 2",
         caption=caption,
@@ -161,13 +161,13 @@ def add_footer(q: Q):
                             ui.link(
                                 name="github",
                                 label="GitHub",
-                                path="https://github.com/example/smartphone-recommendation-system",
+                                path="https://github.com/PathumSanjana/Smartphone-Recommendation-System.git",
                                 target="_blank",
                             ),
                             ui.link(
                                 name="linkedin",
                                 label="LinkedIn",
-                                path="https://www.linkedin.com/in/yourprofile/",
+                                path="https://www.linkedin.com/in/pathum-sanjana-43618a253/",
                                 target="_blank",
                             ),
                         ],
