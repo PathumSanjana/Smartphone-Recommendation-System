@@ -25,7 +25,7 @@ This is a web application that helps users find smartphones similar to the ones 
    python -m venv venv
    .\\venv\\Scripts\\activate
 
-##Usage
+## Usage
 1. **Run the Application:**
    ```bash
    wave run app
