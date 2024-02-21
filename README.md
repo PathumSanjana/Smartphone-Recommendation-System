@@ -25,7 +25,7 @@ This is a web application that helps users find smartphones similar to the ones 
    python -m venv venv
    .\\venv\\Scripts\\activate
 
-****Usage****
+##Usage
 1. **Run the Application:**
    ```bash
    wave run app
@@ -34,18 +34,18 @@ This is a web application that helps users find smartphones similar to the ones 
    Open your web browser and go to http://localhost:10101/smartphone-recommender
 
 3. **Search for Smartphones:**
-   Type the name of a smartphone you like into the search box and click "Search".
-   If the smartphone is found in the database, similar smartphones will be displayed.
-   If not found, suggestions will be provided based on fuzzy matching.
+   - Type the name of a smartphone you like into the search box and click "Search".
+   - If the smartphone is found in the database, similar smartphones will be displayed.
+   - If not found, suggestions will be provided based on fuzzy matching.
 
 
-****Requirements****
-    Python 3.x
-    h2o Wave
-    fuzzywuzzy
+## Requirements
+- Python 3.x
+- h2o Wave
+- fuzzywuzzy
 
 
-****Contributing****
+##Contributing
     Contributions are welcome! If you have suggestions or find any issues, please open an issue or a pull request on GitHub.
 
 
