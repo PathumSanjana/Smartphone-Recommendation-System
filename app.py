@@ -3,6 +3,7 @@ from fuzzywuzzy import process
 from h2o_wave import Q, main, app, ui
 from typing import Any, List, Tuple
 
+
 # Mock smartphone data for demonstration
 smartphone_names = [
     "iPhone 13",
@@ -92,20 +93,33 @@ def add_header(q: Q):
         ],
     )
 
+
+import os
+
+# Define the base URL for your assets folder
+base_url = "http://localhost:10101/assets/"
+
 def add_smartphone_cards(result, q: Q):
     for i in range(1, 6):
+        smartphone_name = result[i-1][0]
+        image_filename = smartphone_name.lower().replace(" ", "_") + ".jpg"  # Generate image filename from smartphone name
+        image_url = base_url + image_filename  # Concatenate base URL with image filename
+        print("Image URL:", image_url)  # Print image URL for debugging
         q.page[f"smartphone{i}"] = ui.tall_article_preview_card(
             box=f"{2*i} 4 2 7",
-            title=f"{result[i-1][0]}",
+            title=f"{smartphone_name}",
             subtitle="",
             value="",
             name="tall_article",
-            image="https://via.placeholder.com/150",
+            image=image_url,  # Use the image URL
             items=[
-                ui.text(f"Manufacturer: {result[i-1][0].split()[0]}", size="l"),
-                ui.text(f"Model: {result[i-1][0].split(maxsplit=1)[1]}", size="m"),
+                ui.text(f"Manufacturer: {smartphone_name.split()[0]}", size="l"),
+                ui.text(f"Model: {smartphone_name.split(maxsplit=1)[1]}", size="m"),
             ],
         )
+
+
+
 
 def add_search_box(q: Q, msg):
     q.page["search_box"] = ui.form_card(
