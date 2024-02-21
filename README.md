@@ -45,7 +45,7 @@ This is a web application that helps users find smartphones similar to the ones 
 - fuzzywuzzy
 
 
-##Contributing
+## Contributing
     Contributions are welcome! If you have suggestions or find any issues, please open an issue or a pull request on GitHub.
 
 
